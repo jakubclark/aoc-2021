@@ -1,3 +1,5 @@
+use std::cmp::Reverse;
+
 #[derive(Debug, PartialEq, Eq, Hash)]
 struct Point {
     row: i32,
@@ -143,7 +145,7 @@ fn solve_part2() -> usize {
         basins.push(basin);
     }
 
-    basins.sort_by(|a, b| b.len().cmp(&a.len()));
+    basins.sort_by_key(|b| Reverse(b.len()));
 
     basins[0].len() * basins[1].len() * basins[2].len()
 }

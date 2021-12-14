@@ -91,7 +91,7 @@ fn parse_input(input: &str) -> Board {
     let y2 = vent_paths.iter().map(|line| line.start.y).max().unwrap();
     let max_y = std::cmp::max(y1, y2) as usize;
 
-    let number_of_columns = max_x + 1 as usize;
+    let number_of_columns = max_x + 1usize;
     let number_of_rows = max_y + 1;
 
     let mut rows = Vec::new();

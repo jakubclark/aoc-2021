@@ -107,7 +107,7 @@ fn solve_part2() -> usize {
 
         sums.push(sum);
     }
-    sums.sort();
+    sums.sort_unstable();
     sums.reverse();
     sums[sums.len() / 2]
 }
